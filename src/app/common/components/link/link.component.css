@@ -1,0 +1,30 @@
+.b-link{
+    text-align: left;
+    font-size: 12px;
+}
+.b-link span{
+   
+    background: #000;
+    color:#fff;
+    padding: 3px;
+}
+.b-link li {
+    margin-bottom: 10px;
+}
+.link{
+    display: flex;
+    justify-content: space-between;
+}
+.link input{
+    width: 370px;
+    padding: 10px;
+    font-size: 14px;
+}
+.link button {
+    background: none;
+    border: 1px solid black;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+}

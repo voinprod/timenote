@@ -1,0 +1,9 @@
+<div class="b-link">
+  <ul>
+    <div class="link">
+        <li>Message link: <input #copyElemet type="text" value="{{href}}{{messageObject?.url}}"></li>
+        <button (click)="copyUrl(copyElemet)">Clipboard</button>
+    </div>
+    <li>Password for open: <span>{{messageObject?.pwd}}</span></li>
+  </ul>
+</div>

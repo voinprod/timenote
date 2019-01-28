@@ -1,10 +1,10 @@
 {
-  "name": "timenote",
+  "name": "folder",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --proxy-config proxy.config.json",
+    "build": "ng build && nodemon server.js && --proxy-config proxy.config.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -20,8 +20,18 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
     "core-js": "^2.5.4",
+    "dotenv": "^6.1.0",
+    "knex": "^0.15.2",
+    "node-cron": "^2.0.3",
+    "password-generator": "^2.2.0",
+    "pg": "^7.6.1",
     "rxjs": "~6.3.3",
+    "url-search-params": "^1.1.0",
+    "url-search-params-polyfill": "^5.0.0",
+    "uuid": "^3.3.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

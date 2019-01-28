@@ -1,0 +1,25 @@
+
+<div class="main-wrapper">
+  <div class="form-wrapper">
+    <h1 class='title'>easy note</h1>
+    <h5 class='sub-title'>send messages, which self-destruct after reading</h5>
+    <div class="what" *ngIf="isOpen == false">
+      <p>What ?</p>
+      <span>
+          To open a message, enter the password below. After opening, the data is destroy.
+      </span>
+    </div>
+    <div *ngIf="isOpen == false" class="b-form">
+        <form (submit)="getDecryptMessage()">
+          <input type="text" [(ngModel)]="password" name="password">
+          <button type="submit">get</button>
+        </form>   
+    </div>
+    
+    <div *ngIf="isOpen == true" class="b-msg">
+      <span class="msg">Message:</span>
+      <hr>
+      {{msg}}
+    </div>
+  </div>
+</div>

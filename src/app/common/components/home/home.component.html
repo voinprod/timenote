@@ -1,0 +1,28 @@
+<div class="main-wrapper">
+  <div class="form-wrapper">
+    <h1 class='title'>easy note</h1>
+    <h5 class='sub-title'>send messages, which self-destruct after reading</h5>
+    <div class="what" *ngIf="chForm == false">
+      <p>Who ?</p>
+      <span>We encrypt your messages and save them for 3 hours.<br>
+        They are encrypted with a random key.<br>
+        Opened? data deleted.
+      </span>
+    </div>
+    <div class="instruction" *ngIf="chForm == false">
+      <p>Steps ?</p>
+      <span>Write secrete message.<br>
+        Click "start".<br>
+       Copy link.
+      </span>
+    </div>
+    <div *ngIf="chForm == false" class="b-form">
+      <form (submit)="addNewMessage()">
+        <label for="textarea">Write here:</label>
+        <textarea [(ngModel)]="text" name="text" id="textarea"></textarea>
+        <button type="submit">Start</button>
+      </form>
+    </div>
+    <app-link *ngIf="chForm != false" [messageObject]="messageObject"></app-link>
+  </div>
+</div>
